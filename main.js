@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
-const gridsizeSlider = document.querySelector(".gridsize-slider");
+const gridsizeSlider = document.querySelector("#gridsize-slider");
 const gridsize = document.querySelector(".gridsize");
 const randomColorButton = document.querySelector("#random-color-button");
 const shadingModeButton  = document.querySelector("#shading-mode-button");
@@ -47,7 +47,7 @@ function setup() {
             shadingModeButton.style.backgroundColor = "#F5A442";
             shadingModeButton.style.border = "1px solid black";
         }
-    });
+    });    
 }
 
 //Creates the grid
@@ -73,7 +73,7 @@ function createGrid(gridsize) {
 function resizeGrid() {
     gridsize.textContent = this.value + "x" + this.value;
     gridContainer.removeChild(gridContainer.firstElementChild);
-    createGrid(this.value);    
+    createGrid(this.value);        
 }
 
 //Draws when a square is clicked
