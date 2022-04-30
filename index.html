@@ -4,11 +4,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <p class="title">Etch-a-Sketch</p>
     <div class="container">
+        <div class="options">
+            <div class="gridsize-slider-container">
+                <p class="gridsize-text">Grid Size</p>
+                <div class="gridsize-slider">
+                    <input type="range" min="1" max="100" value="16" class="gridsize-slider">
+                    <p class="gridsize">16x16</p>
+                </div>
+            </div>
 
+            <div class="button" id="random-color-button">
+                Random
+            </div>
+
+            <div class="button" id="shading-mode-button">
+                Shading Mode
+            </div>
+        </div>
+
+        <div class="grid-container">
+
+        </div>  
     </div>
 
     <script src="main.js"></script>
