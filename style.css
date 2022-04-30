@@ -87,6 +87,16 @@ body {
     font-weight: 600; 
 }
 
+.clear-button {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.clear-button:active {
+    background-color: #E59432;
+    border: 3px solid black;
+}
+
 .button {
     display: flex;
     align-items: center;

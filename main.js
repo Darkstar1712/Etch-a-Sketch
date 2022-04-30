@@ -5,6 +5,7 @@ const randomColorButton = document.querySelector("#random-color-button");
 const shadingModeButton  = document.querySelector("#shading-mode-button");
 const colorPickerWrapper = document.querySelector(".color-picker-wrapper");
 const colorPicker = document.querySelector(".color-picker");
+const clearButton = document.querySelector(".clear-button");
 let randomColorMode = false;
 let shadingMode = false;
 
@@ -55,7 +56,12 @@ function setup() {
             shadingModeButton.style.backgroundColor = "#F5A442";
             shadingModeButton.style.border = "1px solid black";
         }
-    });    
+    });   
+    
+    clearButton.addEventListener("click", () => {
+        gridContainer.removeChild(gridContainer.firstElementChild);
+        createGrid(gridsizeSlider.value);          
+    });
 }
 
 //Creates the grid
