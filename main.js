@@ -3,6 +3,8 @@ const gridsizeSlider = document.querySelector("#gridsize-slider");
 const gridsize = document.querySelector(".gridsize");
 const randomColorButton = document.querySelector("#random-color-button");
 const shadingModeButton  = document.querySelector("#shading-mode-button");
+const colorPickerWrapper = document.querySelector(".color-picker-wrapper");
+const colorPicker = document.querySelector(".color-picker");
 let randomColorMode = false;
 let shadingMode = false;
 
@@ -12,6 +14,12 @@ function setup() {
     createGrid(16);
 
     gridsizeSlider.addEventListener("input", resizeGrid);
+
+    colorPicker.addEventListener("input", function() {
+        colorPickerWrapper.style.backgroundColor = this.value;
+    });
+
+    colorPickerWrapper.style.backgroundColor = colorPicker.value;
 
     randomColorButton.addEventListener("click", () => {
         if(randomColorMode == false) {
@@ -23,7 +31,7 @@ function setup() {
 
             randomColorMode = true;
             randomColorButton.style.backgroundColor = "#E59432";
-            randomColorButton.style.border = "2px solid black";
+            randomColorButton.style.border = "3px solid black";
         } else {
             randomColorMode = false;
             randomColorButton.style.backgroundColor = "#F5A442";
@@ -41,7 +49,7 @@ function setup() {
 
             shadingMode = true;
             shadingModeButton.style.backgroundColor = "#E59432";
-            shadingModeButton.style.border = "2px solid black";
+            shadingModeButton.style.border = "3px solid black";
         } else {
             shadingMode = false;
             shadingModeButton.style.backgroundColor = "#F5A442";
@@ -94,7 +102,7 @@ function drawWhenClicked(e) {
             }
         }
     } else {
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = colorPicker.value;
     }
 }
 
@@ -117,7 +125,7 @@ function drawWhenHovering(e) {
                 }
             }
         } else {
-            e.target.style.backgroundColor = "black";
+            e.target.style.backgroundColor = colorPicker.value;
         }
     }
 }
