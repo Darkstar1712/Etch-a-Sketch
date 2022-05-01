@@ -18,6 +18,18 @@ function setup() {
 
     colorPicker.addEventListener("input", function() {
         colorPickerWrapper.style.backgroundColor = this.value;
+
+        if (randomColorMode == true) {
+            randomColorMode = false;
+            randomColorButton.style.backgroundColor = "#F5A442";
+            randomColorButton.style.border = "1px solid black";
+        }
+
+        if (shadingMode == true) {
+            shadingMode = false;
+            shadingModeButton.style.backgroundColor = "#F5A442";
+            shadingModeButton.style.border = "1px solid black";
+        }
     });
 
     colorPickerWrapper.style.backgroundColor = colorPicker.value;

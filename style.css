@@ -54,12 +54,13 @@ body {
     display: flex;
     background-color: black;
     border-radius: 20px;
+    border: 2px solid black;
 }
 
 .color-picker {
     opacity: 0;
-    height: 30px;
-    width: 50px;
+    height: 25px;
+    width: 40px;
     border-radius: 20px;
 }
 
